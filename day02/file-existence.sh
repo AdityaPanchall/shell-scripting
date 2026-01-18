@@ -1,4 +1,5 @@
 #!/bin/bash
+#File existence checking script
 check_existence(){
 read -p  "Write the name of the file" file
 DIR="/home/aditya"
@@ -8,4 +9,5 @@ else
 	echo "File does not exists in $DIR"
 fi
 }
+
 check_existence
