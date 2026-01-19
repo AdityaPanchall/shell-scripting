@@ -1,0 +1,51 @@
+01  2026-01-17T22:40:01.112Z INFO  api-gateway  Request received method=GET path=/health ip=10.0.2.15
+02  2026-01-17T22:40:01.118Z INFO  api-gateway  Health check passed status=UP
+03  2026-01-17T22:41:05.342Z INFO  auth-service User login attempt username=aditya
+04  2026-01-17T22:41:05.521Z WARN  auth-service Invalid password username=aditya
+05  2026-01-17T22:41:10.998Z INFO  auth-service User login attempt username=aditya
+06  2026-01-17T22:41:11.210Z INFO  auth-service Authentication successful user_id=1023
+07  2026-01-17T22:41:11.214Z INFO  auth-service JWT token generated user_id=1023
+08  2026-01-17T22:41:11.450Z INFO  api-gateway  Forwarded request service=order-service
+09  2026-01-17T22:41:12.008Z INFO  order-service Create order request user_id=1023
+10  2026-01-17T22:41:12.342Z INFO  order-service Order validated order_id=ORD-88921
+11  2026-01-17T22:41:12.560Z INFO  payment-service Payment initiated order_id=ORD-88921
+12  2026-01-17T22:41:13.102Z INFO  payment-service Payment authorized txn_id=TXN-55192
+13  2026-01-17T22:41:13.498Z INFO  order-service Order confirmed order_id=ORD-88921
+14  2026-01-17T22:41:14.011Z INFO  inventory-service Stock reduced sku=SKU-3321 qty=1
+15  2026-01-17T22:41:14.230Z INFO  notification-service Email queued user_id=1023
+16  2026-01-17T22:41:14.731Z INFO  notification-service Email sent message_id=MSG-77812
+17  2026-01-17T22:42:01.041Z INFO  api-gateway  Request received method=GET path=/orders ip=10.0.2.15
+18  2026-01-17T22:42:01.219Z INFO  order-service Fetch orders user_id=1023
+19  2026-01-17T22:42:01.642Z INFO  order-service Orders returned count=3
+20  2026-01-17T22:42:45.993Z WARN  inventory-service Low stock warning sku=SKU-3321 remaining=2
+21  2026-01-17T22:43:12.311Z INFO  cron-service Nightly cleanup started
+22  2026-01-17T22:43:12.912Z INFO  cron-service Removed temp files count=128
+23  2026-01-17T22:43:13.456Z INFO  cron-service Cleanup completed duration_ms=1145
+24  2026-01-17T22:44:07.882Z ERROR payment-service Payment gateway timeout txn_id=TXN-55199
+25  2026-01-17T22:44:07.889Z INFO  payment-service Retrying payment attempt=2
+26  2026-01-17T22:44:08.301Z INFO  payment-service Payment successful txn_id=TXN-55199
+27  2026-01-17T22:44:09.114Z INFO  order-service Order confirmed order_id=ORD-88922
+28  2026-01-17T22:45:00.004Z INFO  monitoring     CPU usage normal value=42%
+29  2026-01-17T22:45:00.006Z INFO  monitoring     Memory usage normal value=61%
+30  2026-01-17T22:46:18.221Z WARN  api-gateway  Slow response detected latency_ms=1800
+31  2026-01-17T22:46:18.554Z INFO  api-gateway  Request completed status=200
+32  2026-01-17T22:47:02.002Z INFO  auth-service Token refreshed user_id=1023
+33  2026-01-17T22:47:45.611Z INFO  user-service Profile updated user_id=1023
+34  2026-01-17T22:48:10.099Z INFO  audit-service Audit log written action=PROFILE_UPDATE
+35  2026-01-17T22:48:55.445Z WARN  auth-service Multiple failed login attempts ip=192.168.1.22
+36  2026-01-17T22:49:30.777Z INFO  security      IP temporarily blocked ip=192.168.1.22
+37  2026-01-17T22:50:01.010Z INFO  api-gateway  Request received method=POST path=/logout
+38  2026-01-17T22:50:01.099Z INFO  auth-service User logged out user_id=1023
+39  2026-01-17T22:50:30.882Z INFO  scheduler     Job started name=db-backup
+40  2026-01-17T22:50:45.312Z INFO  scheduler     Database backup completed size=512MB
+41  2026-01-17T22:51:02.776Z INFO  storage       Backup uploaded bucket=prod-backups
+42  2026-01-17T22:52:00.111Z INFO  monitoring     Disk usage normal value=68%
+43  2026-01-17T22:53:15.443Z ERROR order-service Failed to update order order_id=ORD-88923
+44  2026-01-17T22:53:15.450Z INFO  order-service Retrying update order_id=ORD-88923
+45  2026-01-17T22:53:15.991Z INFO  order-service Order update successful order_id=ORD-88923
+46  2026-01-17T22:54:30.001Z INFO  api-gateway  Request received method=GET path=/metrics
+47  2026-01-17T22:54:30.118Z INFO  monitoring     Metrics exposed format=prometheus
+48  2026-01-17T22:55:00.777Z INFO  cron-service Hourly sync started
+49  2026-01-17T22:55:01.992Z INFO  cron-service Hourly sync completed status=SUCCESS
+50  2026-01-17T22:55:30.000Z INFO  system         Application running normally
+
