@@ -10,10 +10,10 @@ df -h >> $LOG_FILE
 free -m >> $LOG_FILE
 
 #Nginx status check 
-if sudo systemctl is-active nginx
+if  systemctl is-active --quiet nginx
 then 
-	echo "nginx is running"
+	echo "nginx is running" >>$LOG_FILE
 else 
-	echo "nginx is not running"
+	echo "nginx is not running" >> $LOG_FILE
 fi
 
