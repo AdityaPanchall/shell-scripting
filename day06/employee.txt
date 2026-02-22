@@ -1,0 +1,12 @@
+Name:Aditya | Salary: | Company:XYZ
+---------------------------------
+Name:Ramphool | Salary: | Company:ZYX
+---------------------------------
+Name:Aatmaram | Salary: | Company:3.5 LPA
+---------------------------------
+Name:Aditya | Salary:5 LPA | Company:XYZ
+---------------------------------
+Name:Om Prakash | Salary:4.5 LPA | Company:YZZ
+---------------------------------
+Name:Rajbeer | Salary:5 LPA | Company:BTY
+---------------------------------
